@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <style>
+    canvas{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #B9B26C;
+    }
+    #navbar{
+    background-color: #576d2c;
+    box-shadow: 0 2px 10px black;
+    z-index: 3;
+    }
+    body{
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    #underline{
+        border-bottom: 2px solid white;
+    }
+  </style>
+  <body>
+    <div id="particles-js"></div>
+    <nav class="navbar navbar-expand-lg" id="navbar" style="box-shadow: 0 2px 10px black; z-index: 3;">
+      <div class="container-fluid">
+          <div class="d-flex">
+        <a class="navbar-brand fs-3 text-white" href="#"><b>TKA English Language school</b></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-3">
+              <a class="nav-link active fs-5 text-white" aria-current="page" href="./indext.html">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5 text-white" href="#">About</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5 text-white" href="./Review.html">Review</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5 text-white" id="underline" href="./login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+    <div class="box" style="display: flex; align-items: center; justify-content: center; background-size: cover; height: 100vh;">
+        <div class="login" style="background-color: white; padding: 10px; border-radius: 10px; box-shadow: 0 2px 10px black;">
+          <div class="text-center"><h1>Login</h1></div>
+          <div class="input">
+            <div class="t1 my-3 fs-4" style="border-bottom: 2px solid black;"><i class="fa-solid fa-user"></i><input style="background: none; border: none;" type="text" placeholder="User Name"></div>
+            <div class="t2 fs-4" style="border-bottom: 2px solid black;"><i class="fa-solid fa-lock"></i><input style="background: none; border: none;" type="text" placeholder="Password"></div>
+          </div>
+          <div class="li text-end"><a href="" style="text-decoration: none;">Forgot Password?</a></div>
+          <div class="bt">
+            <div class="btn btn-dark w-100 my-4">Login</div>
+          </div>
+          <div class="rem d-flex">
+            <span>Don't have account?</span>
+            <a href="#" style="text-decoration: none;" class="re">register</a>
+          </div>
+        </div>
+        <div class="register" style="display: none; background-color: white; padding: 10px; border-radius: 10px; box-shadow: 0 2px 10px black;">
+          <div class="text-center"><h1>Register</h1></div>
+          <div class="input">
+            <div class="t1 my-3 fs-4" style="border-bottom: 2px solid black;"><i class="fa-solid fa-user"></i><input style="background: none; border: none;" type="text" placeholder="First Name"></div>
+            <div class="t2 fs-4" style="border-bottom: 2px solid black;"><i class="fa-solid fa-user"></i><input style="background: none; border: none;" type="text" placeholder="Last Name"></div>
+            <div class="t1 my-3 fs-4" style="border-bottom: 2px solid black;"><i class="fa-solid fa-envelope"></i><input style="background: none; border: none;" type="text" placeholder="Email"></div>
+            <div class="t2 fs-4" style="border-bottom: 2px solid black;"><i class="fa-solid fa-lock"></i><input style="background: none; border: none;" type="text" placeholder="Password"></div>
+          </div>
+          <div class="li text-end"><a href="" style="text-decoration: none;">Forgot Password?</a></div>
+          <div class="bt">
+            <div class="btn btn-dark w-100 my-4">Login</div>
+          </div>
+          <div class="rem d-flex">
+            <span>Don't have account?</span>
+            <a href="#" style="text-decoration: none;" class="lo">Login</a>
+          </div>
+        </div>   
+    </div>
+    <script>
+        let btn1 = document.querySelector(".re");
+        let btn2 = document.querySelector(".lo");
+        let box1 = document.querySelector(".login");
+        let box2 = document.querySelector(".register");
+        btn1.addEventListener('click' ,function(){
+            btn1.style.display="none";
+            btn2.style.display="block";
+            box2.style.display="block";
+            box1.style.display="none";
+        })
+        btn2.addEventListener('click' ,function(){
+            btn1.style.display="block";
+            btn2.style.display="none";
+            box1.style.display="block";
+            box2.style.display="none";
+        })
+    </script>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
